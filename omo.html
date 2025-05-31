@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>KINGS STORE</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .menu-container {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+    }
+    .menu-icon {
+      font-size: 24px;
+      cursor: pointer;
+      padding: 10px;
+      border: none;
+      background: none;
+    }
+    .menu-icon:hover{
+      text-shadow: 0px 0px 20px aqua;
+
+    }
+
+    
+    .dropdown {
+      display: none;
+      position: absolute;
+      right: 0;
+      background:linear-gradient(to right, #121212, #1e1e1e, #2c2c2c);
+      min-width: 160px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+      border-radius: 5px;
+      overflow: hidden;
+      border: aqua 1px solid;
+    }
+    .dropdown a {
+      padding: 12px 16px;
+      display: block;
+      text-decoration: none;
+      color: aqua;
+    }
+    .dropdown a:hover {
+      text-shadow: 0px 0px 10px aqua;
+      transform: scale(1.5cm) ;
+    }
+  </style>
+</head>
+<html>
+<body>
+
+<div class="menu-container">
+  <button class="menu-icon" onclick="toggleDropdown()">☰</button>
+  <div id="dropdown" class="dropdown">
+    <a href="#">Contact</a>
+    <a href="#">About</a>
+    <a href="#">Reseller</a>
+    <a href="#">Logout</a>
+  </div>
+</div>
+
+<script>
+  function toggleDropdown() {
+    const dropdown = document.getElementById("dropdown");
+    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+  }
+
+  // Optional: Close the dropdown when clicking outside
+  window.onclick = function(event) {
+    if (!event.target.matches('.menu-icon')) {
+      const dropdown = document.getElementById("dropdown");
+      if (dropdown.style.display === "block") {
+        dropdown.style.display = "none";
+      }
+    }
+  }
+</script>
+
+
+<h1>KINGS DOMAIN</h1><br>
+<h2>Welcome to the Kings Store</h2>
+</body>
+</html>
+<style>
+  body{
+  background: linear-gradient(to right, #121212, #1e1e1e, #2c2c2c);
+
+  display: flex;}
+  h1{
+    text-align: center;
+    color: aqua;
+    padding: 5px 10px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-shadow: 0px 0px 20px aqua;
+  
+  }
+h2{
+  text-align: center;
+  color: white;
+  padding: 5px 10px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-shadow: 0px 0px 20px aqua;
+  transform: translateX(50px 50px);
+  transform: translateY(100px);
+}
+  
+</style>
+
+<div class="doings">
+
+</div>
